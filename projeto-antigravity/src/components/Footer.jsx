@@ -158,8 +158,8 @@ const Footer = () => {
             right: 30px;
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            width: 64px;
-            height: 64px;
+            width: 70px; /* Slightly larger */
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -169,15 +169,49 @@ const Footer = () => {
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid rgba(255,255,255,0.2);
+            animation: pulse-green 2s infinite;
         }
         .whatsapp-float:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.1);
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+            animation: none; /* Stop pulsing on hover */
         }
         .whatsapp-float svg {
             fill: white;
-            width: 34px;
-            height: 34px;
+            width: 38px;
+            height: 38px;
+        }
+        
+        /* Notification Dot */
+        .whatsapp-float::after {
+            content: '1';
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background-color: #ff3b30;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
       `}</style>
     </footer>
