@@ -1,5 +1,7 @@
 import React from 'react';
 
+import heroGraphic from '../assets/img/Logo.png'; // Placeholder: Please replace with your image renamed to 'hero-graphic.png'
+
 const Hero = () => {
   return (
     <section id="home" className="hero-section">
@@ -9,17 +11,24 @@ const Hero = () => {
          <div className="grid-overlay"></div>
       </div>
 
-      <div className="container hero-content">
-        <h1 className="hero-title">
-          INNOVATING <br />
-          <span className="text-gradient">THE FUTURE</span>
-        </h1>
-        <p className="hero-subtitle">
-          AI-Powered Solutions for a Digital Tomorrow.
-          Secure, scalable, and intelligent systems.
-        </p>
-        <div className="hero-cta">
-          <a href="#quote" className="btn-glow">Get Started Now</a>
+      <div className="container hero-container">
+        <div className="hero-content">
+            <h1 className="hero-title">
+              INOVANDO <br />
+              <span className="text-gradient">O FUTURO</span>
+            </h1>
+            <p className="hero-subtitle">
+              Soluções com inteligência artificial para um futuro digital.
+              Sistemas seguros, escaláveis e inteligentes.
+            </p>
+            <div className="hero-cta">
+              <a href="#quote" className="btn-glow">COMECE AGORA MESMO</a>
+            </div>
+        </div>
+        
+        <div className="hero-image-wrapper">
+            <div className="hero-image-glow"></div>
+            <img src={heroGraphic} alt="Innovative Technology" className="hero-graphic" />
         </div>
       </div>
 
@@ -61,7 +70,6 @@ const Hero = () => {
         .orb-2 {
             width: 500px;
             height: 500px;
-            background: var(--color-accent-primary); /* Fallback or specific */
             background: #0070f3;
             bottom: -100px;
             left: -100px;
@@ -81,23 +89,93 @@ const Hero = () => {
             mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
         }
 
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            width: 100%;
+        }
+
         .hero-content {
-          max-width: 900px;
+          flex: 1;
+          max-width: 600px;
           z-index: 1;
         }
+        
         .hero-title {
-          font-size: clamp(48px, 8vw, 90px);
+          font-size: clamp(3rem, 5vw, 4.5rem);
           line-height: 1.1;
           margin-bottom: 2rem;
           text-transform: uppercase;
         }
+        
         .hero-subtitle {
           font-size: 1.25rem;
           color: var(--color-text-secondary);
-          max-width: 500px;
           margin-bottom: 3rem;
           border-left: 3px solid var(--color-accent-cyan);
           padding-left: 1.5rem;
+          max-width: 480px;
+          line-height: 1.6;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-graphic {
+            width: 100%;
+            max-width: 600px; 
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            position: relative;
+            z-index: 2;
+            /* Applying screen blend mode for glowing effect integration if fits, otherwise normal */
+            mix-blend-mode: screen; 
+            filter: drop-shadow(0 0 20px rgba(0, 112, 243, 0.3));
+        }
+        
+        .hero-image-glow {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: var(--gradient-main);
+            filter: blur(60px);
+            opacity: 0.4;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+            .hero-content {
+                max-width: 100%;
+            }
+            .hero-subtitle {
+                margin: 0 auto 3rem auto;
+                text-align: left;
+                display: inline-block;
+            }
+            .hero-image-wrapper {
+                width: 100%;
+            }
         }
       `}</style>
     </section>
