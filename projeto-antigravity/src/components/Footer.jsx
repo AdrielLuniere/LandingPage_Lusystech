@@ -1,0 +1,187 @@
+import React from 'react';
+
+import logoImg from '../assets/img/Logo.png';
+
+const Footer = () => {
+    const [isPrivacyOpen, setIsPrivacyOpen] = React.useState(false);
+    const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer-section">
+      <div className="container footer-content">
+        <div className="footer-col">
+            <a href="#home" className="footer-logo-link">
+               <img src={logoImg} alt="NeoTech" className="footer-logo-img" />
+            </a>
+            <p>Advancing the world through code.</p>
+        </div>
+        <div className="footer-col">
+            <h4>Contact</h4>
+            <p>contact@lusystech.com</p>
+            <p>+1 (555) 123-4567</p>
+            <p>Tech Valley, CA</p>
+        </div>
+        <div className="footer-col">
+             <h4>Follow Us</h4>
+             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                Instagram ↗
+             </a>
+        </div>
+      </div>
+
+      <div className="container">
+          <div className="privacy-wrapper" onClick={() => setIsPrivacyOpen(!isPrivacyOpen)}>
+              <div className={`privacy-content ${isPrivacyOpen ? 'expanded' : ''}`}>
+                  <strong>Política de Privacidade da Lusystech:</strong> A Lusystech está comprometida em proteger a privacidade de seus usuários. Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos as informações que coletamos dos nossos usuários. Ao usar nossos serviços, você concorda com esta Política de Privacidade. <strong>Coleta de Informações:</strong> A Lusystech coleta informações pessoais que você fornece, tais como nome, endereço de e-mail e telefone, quando você se registra em nossos serviços ou realiza uma transação conosco. Também podemos coletar informações sobre como você usa nossos serviços, incluindo seu endereço IP, tipo de navegador, páginas acessadas e duração da visita. <strong>Uso de Informações:</strong> A Lusystech usa as informações coletadas para fornecer nossos serviços, processar transações, enviar comunicações e responder a solicitações de suporte. <strong>Compartilhamento:</strong> Não vendemos nem alugamos suas informações pessoais para terceiros. <strong>Segurança:</strong> Adotamos medidas de segurança razoáveis para proteger as informações. <strong>Alterações:</strong> A Lusystech reserva-se o direito de atualizar esta política a qualquer momento.
+              </div>
+              <div className={`privacy-toggle-icon ${isPrivacyOpen ? 'rotated' : ''}`}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+              </div>
+          </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>&copy; {currentYear} Lusystech Solutions. All rights reserved.</p>
+        <p className="legal-note">Lei nº 13.709/2018</p>
+      </div>
+
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="whatsapp-float" aria-label="Chat on WhatsApp">
+         <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.6.329 1.64.67 2.796.67 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.769-5.768-5.757zm0 10.153c-1.065 0-1.878-.293-2.392-.563l-1.996.523.535-1.944c-.722-.843-.722-1.002-.722-2.388 0-2.454 1.996-4.45 4.545-4.437 2.528.012 4.475 2.052 4.474 4.502-.001 2.37-2.022 4.307-4.444 4.307z"/>
+             <path d="M12 2C6.48 2 2 6.48 2 12c0 2.169.706 4.195 1.914 5.865L2.245 22.5l4.81-1.26A9.962 9.962 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.27c-1.614 0-3.123-.466-4.417-1.28l-.316-.2-.318.083-2.653.695.709-2.584.07-.324-.213-.339A8.257 8.257 0 0 1 12 3.73c4.56 0 8.27 3.71 8.27 8.27 0 4.56-3.71 8.27-8.27 8.27z"/>
+         </svg>
+      </a>
+
+      <style>{`
+        .footer-section {
+            background-color: var(--color-bg-primary);
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            position: relative;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-logo-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .footer-logo-img {
+            height: 90px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.4));
+            transition: var(--transition);
+        }
+        .footer-logo-img:hover {
+            filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
+            transform: translateY(-3px) scale(1.02);
+        }
+        .footer-col h4 {
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+        }
+        .footer-col p, .footer-col a {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .social-link:hover {
+            color: var(--color-accent-blue);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .legal-note {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-top: 0.5rem;
+            text-decoration: underline;
+        }
+
+        /* Privacy Policy */
+        .privacy-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .privacy-wrapper:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .privacy-content {
+            color: var(--color-text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        .privacy-content.expanded {
+            display: block;
+            -webkit-line-clamp: unset;
+        }
+        .privacy-toggle-icon {
+            color: var(--color-text-primary);
+            transition: transform 0.3s ease;
+            margin-top: 2px;
+        }
+        .privacy-toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-float svg {
+            fill: white;
+            width: 34px;
+            height: 34px;
+        }
+      `}</style>
+    </footer>
+  );
+};
+
+export default Footer;
