@@ -1,20 +1,22 @@
 import React from 'react';
 
 const Company = () => {
+    // Features array kept for visual layout, but text can be static or removed if desired. 
+    // Keeping them as "Values" icons for now or just visual candy.
     const features = [
         {
-          title: 'Trust',
-          description: 'Building secure relationships through transparent and reliable software delivery.',
+          title: 'Confiança',
+          description: 'Segurança e estabilidade em primeiro lugar.',
           icon: '🛡️'
         },
         {
-          title: 'Innovation',
-          description: 'Leveraging cutting-edge technologies to solve complex business challenges.',
+          title: 'Inovação',
+          description: 'Sempre à frente das tendências do mercado.',
           icon: '💡'
         },
         {
-          title: 'Professionalism',
-          description: 'Expert engineering teams dedicated to excellence and code quality.',
+          title: 'Profissionalismo',
+          description: 'Excelência e dedicação em cada projeto.',
           icon: '🤝'
         }
     ];
@@ -22,55 +24,44 @@ const Company = () => {
   return (
     <section id="company" className="company-section">
       <div className="container">
-        <h2 className="section-title">EMPRESA</h2>
+        <h2 className="section-title">Empresa</h2>
         
-        {/* Original 3 Cards */}
-        <div className="features-grid">
-            {features.map((feature, index) => (
-                <div key={index} className="feature-card glass-card">
-                    <div className="feature-icon-wrapper">
-                        <div className="feature-icon">{feature.icon}</div>
-                    </div>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                </div>
-            ))}
-        </div>
-
-        {/* New Detailed Sections */}
         <div className="company-details">
+            {/* Sobre */}
             <div className="detail-block glass-card">
                 <div className="detail-content">
                     <h3>Sobre a Lusystech</h3>
                     <p>
-                        A Lusystech foi criada com o intuito de fazer com que pequenos, médios e grandes negócios alcancem 
-                        seus objetivos por meio de soluções tecnológicas e inovadoras. Somos uma organização voltada a 
-                        desenvolver softwares para automatizar de maneira significativa as atividades de empresas que 
-                        possuem grande potencial, garantindo alta performance e usabilidade.
+                        A Lusystech foi criada com o intuito de fazer com que pequenos, médios e grandes negócios alcancem seus objetivos por meio de soluções tecnológicas e inovadoras na qual temos pleno conhecimento e maneiras diferenciadas de tratar os projetos a qual somos submetidas. Somos uma organização voltada a desenvolver softwares para automatizar de maneira significativa as atividades de empresas que possuem grande potencial, porém, possuem dificuldades de gerenciar suas atividades e assim ter resultados mais eficazes.
+                    </p>
+                    <p style={{ marginTop: '1rem' }}>
+                        Baseado nisso, cruzamos as necessidades de nossos clientes com as estratégias de negócio, gerando um produto de alta performance, usabilidade e alinhado a proposta de valor de seu negócio.
                     </p>
                 </div>
             </div>
 
+            {/* Propósito */}
             <div className="detail-block glass-card reversed">
                 <div className="detail-content">
                     <h3>Propósito</h3>
                     <p>
-                        A missão da Lusystech é fornecer soluções inovadoras de alta qualidade através da tecnologia que 
-                        atendam às necessidades dos nossos clientes. Buscamos constantemente aprimorar nossos produtos 
-                        e serviços, proporcionando experiências excepcionais para nossos usuários. Nosso objetivo é ser 
-                        referência em desenvolvimento de soluções computacionais.
+                        A missão da Lusystech é fornecer soluções inovadoras de alta qualidade através da tecnologia que atendam às necessidades dos nossos clientes. Nós buscamos constantemente aprimorar nossos produtos e serviços, proporcionando experiências excepcionais para nossos usuários, ajudando-os a alcançar seus objetivos.
+                    </p>
+                    <p style={{ marginTop: '1rem' }}>
+                        Na Lusystech, nossa visão é ser uma das principais empresas de tecnologia e desenvolvimento de soluções computacionais reconhecida pela excelência em soluções inovadoras e de alta qualidade que ajudam nossos clientes a alcançar seus objetivos. Queremos ser a primeira escolha de nossos clientes e parceiros quando se tratar de tecnologia e inovação, oferecendo serviços personalizados e de alto valor agregado.
                     </p>
                 </div>
             </div>
 
+            {/* Valores (Bottom Left in image) */}
             <div className="detail-block glass-card">
                 <div className="detail-content">
                     <h3>Nossos Valores</h3>
                     <p>
-                        Valorizamos a excelência, a inovação, a ética e a responsabilidade. Desenvolvendo soluções para 
-                        melhorar o futuro, respeitando o passado. Acreditamos que a ética é fundamental para a construção 
-                        de relacionamentos de longo prazo. Somos uma empresa líder no mercado de tecnologia, comprometida 
-                        com o sucesso de nossos parceiros.
+                        Na Lusystech, valorizamos a excelência, a inovação, a ética e a responsabilidade. Desenvolvendo soluções para melhorar o futuro, mas respeitando o passado. Nós valorizamos a inovação e estamos sempre buscando maneiras de melhorar nossas soluções e atender melhor nossos clientes.
+                    </p>
+                    <p style={{ marginTop: '1rem' }}>
+                         Nós acreditamos que a ética é fundamental para a construção de relacionamentos de longo prazo com nossos clientes e parceiros, e que a responsabilidade social é um aspecto essencial do nosso papel como empresa líder no mercado de tecnologia.
                     </p>
                 </div>
             </div>

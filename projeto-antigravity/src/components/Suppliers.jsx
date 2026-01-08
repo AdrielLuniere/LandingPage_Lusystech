@@ -19,7 +19,7 @@ const Suppliers = () => {
   return (
     <section id="suppliers" className="suppliers-section">
       <div className="container">
-        <h2 className="section-title">OUR STRATEGIC PARTNERS</h2>
+        <h2 className="section-title">NOSSOS PARCEIROS</h2>
         
         <div className="partners-grid">
           {partners.map((partner, index) => (

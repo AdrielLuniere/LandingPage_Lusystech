@@ -16,13 +16,13 @@ const Footer = () => {
             <p>Advancing the world through code.</p>
         </div>
         <div className="footer-col">
-            <h4>Contact</h4>
+            <h4>Contato</h4>
             <p>contact@lusystech.com</p>
             <p>+1 (555) 123-4567</p>
             <p>Tech Valley, CA</p>
         </div>
         <div className="footer-col">
-             <h4>Follow Us</h4>
+             <h4>Siga-nos</h4>
              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
                 Instagram ↗
              </a>
@@ -32,7 +32,7 @@ const Footer = () => {
       <div className="container">
           <div className="privacy-wrapper" onClick={() => setIsPrivacyOpen(!isPrivacyOpen)}>
               <div className={`privacy-content ${isPrivacyOpen ? 'expanded' : ''}`}>
-                  <strong>Política de Privacidade da Lusystech:</strong> A Lusystech está comprometida em proteger a privacidade de seus usuários. Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos as informações que coletamos dos nossos usuários. Ao usar nossos serviços, você concorda com esta Política de Privacidade. <strong>Coleta de Informações:</strong> A Lusystech coleta informações pessoais que você fornece, tais como nome, endereço de e-mail e telefone, quando você se registra em nossos serviços ou realiza uma transação conosco. Também podemos coletar informações sobre como você usa nossos serviços, incluindo seu endereço IP, tipo de navegador, páginas acessadas e duração da visita. <strong>Uso de Informações:</strong> A Lusystech usa as informações coletadas para fornecer nossos serviços, processar transações, enviar comunicações e responder a solicitações de suporte. <strong>Compartilhamento:</strong> Não vendemos nem alugamos suas informações pessoais para terceiros. <strong>Segurança:</strong> Adotamos medidas de segurança razoáveis para proteger as informações. <strong>Alterações:</strong> A Lusystech reserva-se o direito de atualizar esta política a qualquer momento.
+                  <strong>Política de Privacidade da Lusystech:</strong> A Lusystech está comprometida em proteger a privacidade de seus usuários... (Conteúdo resumido para demo).
               </div>
               <div className={`privacy-toggle-icon ${isPrivacyOpen ? 'rotated' : ''}`}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

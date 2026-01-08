@@ -25,7 +25,7 @@ const Quote = () => {
   return (
     <section id="quote" className="quote-section">
       <div className="container">
-        <h2 className="section-title">GET A FREE QUOTE</h2>
+        <h2 className="section-title">SOLICITE UM ORÇAMENTO</h2>
         <div className="quote-container glass-card">
             <form className="quote-form" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -36,7 +36,7 @@ const Quote = () => {
                         value={formData.name} 
                         onChange={handleChange} 
                         required 
-                        placeholder="Name"
+                        placeholder="Nome Completo"
                         className="modern-input"
                     />
                 </div>
@@ -48,7 +48,7 @@ const Quote = () => {
                         value={formData.email} 
                         onChange={handleChange} 
                         required 
-                        placeholder="Email Address"
+                        placeholder="E-mail Profissional"
                         className="modern-input"
                     />
                 </div>
@@ -59,7 +59,7 @@ const Quote = () => {
                         name="phone" 
                         value={formData.phone} 
                         onChange={handleChange} 
-                        placeholder="Phone Number (Optional)"
+                        placeholder="Telefone / WhatsApp"
                          className="modern-input"
                     />
                 </div>
@@ -70,11 +70,11 @@ const Quote = () => {
                         value={formData.message} 
                         onChange={handleChange} 
                         rows="4" 
-                        placeholder="Project Details"
+                        placeholder="Como podemos ajudar?"
                         className="modern-input"
                     ></textarea>
                 </div>
-                <button type="submit" className="btn-glow submit-btn">SUBMIT INQUIRY</button>
+                <button type="submit" className="btn-glow submit-btn">Enviar Solicitação</button>
             </form>
         </div>
       </div>

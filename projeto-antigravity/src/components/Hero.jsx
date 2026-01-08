@@ -1,6 +1,6 @@
 import React from 'react';
 
-import heroGraphic from '../assets/img/Logo.png'; // Placeholder: Please replace with your image renamed to 'hero-graphic.png'
+import heroGraphic from '../assets/img/Logo.png'; // Placeholder
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="text-gradient">O FUTURO</span>
             </h1>
             <p className="hero-subtitle">
-              Soluções com inteligência artificial para um futuro digital.
+              Soluções com inteligência artificial para um futuro digital. <br className="hide-mobile" />
               Sistemas seguros, escaláveis e inteligentes.
             </p>
             <div className="hero-cta">
@@ -39,54 +39,17 @@ const Hero = () => {
           align-items: center;
           padding-top: 80px; 
           position: relative;
+          background: radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 100% 100%, rgba(0, 112, 243, 0.2) 0%, transparent 50%);
+          /* Add a subtle mesh grid for the tech feel */
+          background-image: 
+              linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+          background-size: 40px 40px;
         }
         
         .hero-bg-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        
-        .glow-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.5;
-        }
-        
-        .orb-1 {
-            width: 300px;
-            height: 300px;
-            background: var(--color-accent-purple);
-            top: -50px;
-            right: -50px;
-            opacity: 0.3;
-        }
-        
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: #0070f3;
-            bottom: -100px;
-            left: -100px;
-            opacity: 0.2;
-        }
-        
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+            display: none; /* Hide old orbs for cleaner look */
         }
 
         .hero-container {
@@ -100,23 +63,25 @@ const Hero = () => {
         .hero-content {
           flex: 1;
           max-width: 600px;
-          z-index: 1;
+          z-index: 10;
         }
         
         .hero-title {
-          font-size: clamp(3rem, 5vw, 4.5rem);
+          font-size: clamp(3.5rem, 6vw, 5rem);
           line-height: 1.1;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
           text-transform: uppercase;
+          font-weight: 900;
+          letter-spacing: -1px;
         }
         
         .hero-subtitle {
           font-size: 1.25rem;
           color: var(--color-text-secondary);
-          margin-bottom: 3rem;
-          border-left: 3px solid var(--color-accent-cyan);
+          margin-bottom: 2.5rem;
+          border-left: 4px solid var(--color-accent-blue);
           padding-left: 1.5rem;
-          max-width: 480px;
+          max-width: 500px;
           line-height: 1.6;
         }
 
@@ -126,44 +91,70 @@ const Hero = () => {
             justify-content: center;
             align-items: center;
             position: relative;
-            animation: float 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
 
-        .hero-graphic {
-            width: 100%;
-            max-width: 600px; 
-            height: auto;
-            object-fit: contain;
-            border-radius: 12px;
-            position: relative;
-            z-index: 2;
-            /* Applying screen blend mode for glowing effect integration if fits, otherwise normal */
-            mix-blend-mode: screen; 
-            filter: drop-shadow(0 0 20px rgba(0, 112, 243, 0.3));
-        }
-        
+        /* Isometric Platform Effect */
         .hero-image-glow {
             position: absolute;
             width: 80%;
             height: 80%;
-            background: var(--gradient-main);
-            filter: blur(60px);
-            opacity: 0.4;
-            border-radius: 50%;
-            z-index: 1;
+            background: linear-gradient(45deg, var(--color-accent-blue), var(--color-accent-purple));
+            opacity: 0.2;
+            border-radius: 20px;
+            transform: rotateX(60deg) rotateZ(-30deg) translateZ(-50px);
+            filter: blur(20px);
+            box-shadow: 0 0 50px rgba(0, 112, 243, 0.4);
+            animation: pulse-platform 4s ease-in-out infinite alternate;
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .hero-graphic {
+            width: 100%;
+            max-width: 550px; 
+            height: auto;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            /* Isometric tilt for the image itself if it's 2D */
+            transform: rotateX(10deg) rotateY(-10deg);
+            /* Tinting Logo to #0060df from Black/Dark */
+            filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2975%) hue-rotate(205deg) brightness(96%) contrast(103%) drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            animation: float-iso 6s ease-in-out infinite;
+        }
+        
+        .hero-cta .btn-glow {
+            background: var(--color-accent-blue);
+            box-shadow: 0 10px 20px -10px rgba(0, 112, 243, 0.5);
+            border-radius: 8px; /* More techy, less pill */
+            padding: 1rem 2.5rem;
+        }
+        .hero-cta .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0, 112, 243, 0.7);
+            background: #0060df;
+        }
+
+        @keyframes float-iso {
+            0% { transform: rotateX(10deg) rotateY(-10deg) translateY(0px); }
+            50% { transform: rotateX(10deg) rotateY(-10deg) translateY(-20px); }
+            100% { transform: rotateX(10deg) rotateY(-10deg) translateY(0px); }
+        }
+        
+        @keyframes pulse-platform {
+            0% { opacity: 0.2; transform: rotateX(60deg) rotateZ(-30deg) translateZ(-50px) scale(0.95); }
+            100% { opacity: 0.4; transform: rotateX(60deg) rotateZ(-30deg) translateZ(-50px) scale(1.05); }
         }
 
         @media (max-width: 968px) {
+            .hero-section {
+                padding-top: 120px;
+                display: block;
+            }
             .hero-container {
                 flex-direction: column;
                 text-align: center;
-                gap: 3rem;
+                gap: 4rem;
             }
             .hero-content {
                 max-width: 100%;
@@ -175,6 +166,20 @@ const Hero = () => {
             }
             .hero-image-wrapper {
                 width: 100%;
+                perspective: none; /* Disable 3D on mobile for better fit */
+            }
+            .hero-graphic {
+                transform: none; /* Flatten on mobile */
+                animation: float 6s ease-in-out infinite;
+            }
+            .hero-image-glow {
+                transform: scale(0.9);
+                animation: none;
+            }
+             @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
             }
         }
       `}</style>

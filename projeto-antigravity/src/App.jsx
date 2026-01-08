@@ -7,17 +7,17 @@ import Suppliers from './components/Suppliers';
 import Quote from './components/Quote';
 import Footer from './components/Footer';
 
+import { LanguageProvider } from './context/LanguageContext';
+
 function App() {
   return (
-    <div className="App">
+    <div className="app-wrapper">
       <Navbar />
-      <main>
-        <Hero />
-        <Company />
-        <Services />
-        <Suppliers />
-        <Quote />
-      </main>
+      <Hero />
+      <Company />
+      <Services />
+      <Suppliers />
+      <Quote />
       <Footer />
     </div>
   );

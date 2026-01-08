@@ -1,27 +1,31 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
-      title: 'Desenvolvimento de Apps Mobile',
-      description: 'Nossa equipe cria soluções móveis que ajudam nossos clientes a se conectar com seus usuários de forma eficiente, tanto para Android quanto para iOS.',
+      title: t('Desenvolvimento de aplicativos Mobile'),
+      description: t('Nossa equipe de desenvolvimento de aplicativos cria soluções móveisque ajudam nossos clientes a se conectar com seus clientese a gerenciar seus negócios de forma eficiente, tanto pra android quanto para IOs'),
       icon: '📱'
     },
     {
-      title: 'Desenvolvimento Web',
-      description: 'Usamos a tecnologia mais atual e performática para criar o seu site ou aplicação web o mais rápido e eficiente possível.',
+      title: t('Desenvolvimento web'),
+      description: t('Usamos a tecnologia mais atual e performática para para criar o seu site o mais rápido possível'),
       icon: '💻',
       highlight: true
     },
     {
-      title: 'Cloud Computing',
-      description: 'Oferecemos soluções de Cloud para ajudar nossos clientes a gerenciar seus dados e processos com segurança, eficiência e escalabilidade.',
+      title: t('Serviços de Cloud Computing'),
+      description: t('Oferecemos soluções de Cloud Computing para ajudar nossos clientes a gerenciarseus dados e processos com segurança e eficiência, além de permitir que trabalhem remotamente'),
       icon: '☁️'
     },
     {
-      title: 'Automação',
-      description: 'Serviços de automação de processos de negócios para ajudar a aumentar a eficiência e a produtividade de suas operações.',
-      icon: '⚙️'
+      
+       title: 'Automação',
+       description: 'Serviços de automação de processos de negócios para ajudar a aumentar a eficiência e a produtividade de suas operações.',
+       icon: '⚙️'
     },
     {
       title: 'Segurança da Informação',

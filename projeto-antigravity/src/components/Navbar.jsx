@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
 import logoImg from '../assets/img/Logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -16,10 +15,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Company', href: '#company' },
-    { name: 'Services', href: '#services' },
-    { name: 'Suppliers', href: '#suppliers' },
-    { name: 'Quote', href: '#quote' },
+    { name: 'A Empresa', href: '#company' },
+    { name: 'Serviços', href: '#services' },
+    { name: 'Fornecedores', href: '#suppliers' },
+    { name: 'Orçamento', href: '#quote' },
   ];
 
   return (
@@ -30,6 +29,7 @@ const Navbar = () => {
         </a>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+          
           {navLinks.map((link) => (
             <a 
               key={link.name} 
@@ -40,7 +40,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#quote" className="btn-primary mobile-cta" onClick={() => setMobileMenuOpen(false)}>
-            Get Started
+            Começar Agora
           </a>
         </div>
 
@@ -79,19 +79,16 @@ const Navbar = () => {
           justify-content: space-between;
           align-items: center;
         }
-        .logo-link {
-          display: flex;
-          align-items: center;
-        }
         .logo-img {
           height: 80px;
           object-fit: contain;
           transition: var(--transition);
-          filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.4));
+          /* Tinting Logo to #2eb1e8 */
+          filter: brightness(0) saturate(100%) invert(60%) sepia(82%) saturate(400%) hue-rotate(168deg) brightness(93%) contrast(95%) drop-shadow(0 0 5px rgba(46, 177, 232, 0.4));
         }
         .logo-img:hover {
-          filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
-          transform: translateY(-3px) scale(1.02);
+            transform: translateY(-3px) scale(1.02);
+            filter: brightness(0) saturate(100%) invert(60%) sepia(82%) saturate(400%) hue-rotate(168deg) brightness(93%) contrast(95%) drop-shadow(0 0 15px rgba(46, 177, 232, 0.6));
         }
         .navbar.scrolled .logo-img {
            height: 70px;
@@ -101,6 +98,7 @@ const Navbar = () => {
           gap: 2rem;
           align-items: center;
         }
+        
         .nav-links a:not(.btn-primary) {
           font-size: 0.9rem;
           font-weight: 500;
