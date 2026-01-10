@@ -26,6 +26,18 @@ const Company = () => {
       <div className="container">
         <h2 className="section-title">Empresa</h2>
         
+        <div className="features-grid">
+            {features.map((feature, index) => (
+                <div key={index} className="feature-card glass-card">
+                    <div className="feature-icon-wrapper">
+                        <div className="feature-icon">{feature.icon}</div>
+                    </div>
+                    <h3>{feature.title}</h3>
+                    <p>{feature.description}</p>
+                </div>
+            ))}
+        </div>
+
         <div className="company-details">
             {/* Sobre */}
             <div className="detail-block glass-card">

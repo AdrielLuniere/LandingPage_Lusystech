@@ -119,8 +119,10 @@ const Hero = () => {
             /* Isometric tilt for the image itself if it's 2D */
             transform: rotateX(10deg) rotateY(-10deg);
             /* Tinting Logo to #0060df from Black/Dark */
-            filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2975%) hue-rotate(205deg) brightness(96%) contrast(103%) drop-shadow(0 20px 40px rgba(0,0,0,0.5));
-            animation: float-iso 6s ease-in-out infinite;
+           filter: brightness(0) saturate(100%) invert(66%) sepia(44%) saturate(546%) hue-rotate(132deg) brightness(95%) contrast(96%)
+            drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+
+animation: float-iso 6s ease-in-out infinite;
         }
         
         .hero-cta .btn-glow {

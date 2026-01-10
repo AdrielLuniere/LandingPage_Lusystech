@@ -83,8 +83,8 @@ const Navbar = () => {
           height: 80px;
           object-fit: contain;
           transition: var(--transition);
-          /* Tinting Logo to #2eb1e8 */
-          filter: brightness(0) saturate(100%) invert(60%) sepia(82%) saturate(400%) hue-rotate(168deg) brightness(93%) contrast(95%) drop-shadow(0 0 5px rgba(46, 177, 232, 0.4));
+          /* Tinting Logo to #1ebad7 (Cyan/Turquoise that matches the new theme) */
+          filter: brightness(0) saturate(100%) invert(77%) sepia(35%) saturate(763%) hue-rotate(147deg) brightness(88%) contrast(88%) drop-shadow(0 0 5px rgba(30, 186, 215, 0.4));
         }
         .logo-img:hover {
             transform: translateY(-3px) scale(1.02);
