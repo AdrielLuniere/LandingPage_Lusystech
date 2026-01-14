@@ -1,0 +1,78 @@
+{
+  "translation": {
+    "navbar": {
+      "home": "Home",
+      "company": "Company",
+      "services": "Services",
+      "suppliers": "Suppliers",
+      "quote": "Quote",
+      "cta": "Get Started"
+    },
+    "hero": {
+      "title": "Innovative Technology Solutions",
+      "subtitle": "Transforming ideas into digital reality",
+      "cta": "Get Started"
+    },
+    "company": {
+      "title": "Company",
+      "features": {
+        "trust": { "title": "Trust", "desc": "Security and stability first." },
+        "innovation": { "title": "Innovation", "desc": "Always ahead of market trends." },
+        "professionalism": { "title": "Professionalism", "desc": "Excellence and dedication in every project." }
+      },
+      "about": {
+        "title": "About Lusystech",
+        "text1": "Lusystech was created with the intention of helping small, medium, and large businesses achieve their goals through technological and innovative solutions in which we have full knowledge and differentiated ways of treating the projects we are submitted to. We are an organization dedicated to developing software to significantly automate the activities of companies that have great potential but have difficulty managing their activities and thus having more effective results.",
+        "text2": "Based on this, we cross-reference our clients' needs with business strategies, generating a high-performance product with usability aligned with your business's value proposition."
+      },
+      "purpose": {
+        "title": "Purpose",
+        "text1": "Lusystech's mission is to provide high-quality innovative solutions through technology that meet our clients' needs. We constantly seek to improve our products and services, providing exceptional experiences for our users, helping them achieve their goals.",
+        "text2": "At Lusystech, our vision is to be one of the leading technology and computational solution development companies recognized for excellence in innovative and high-quality solutions that help our clients achieve their goals. We want to be our clients' and partners' first choice when it comes to technology and innovation, offering personalized and high-value-added services."
+      },
+      "values": {
+        "title": "Our Values",
+        "text1": "At Lusystech, we value excellence, innovation, ethics, and responsibility. Developing solutions to improve the future, but respecting the past. We value innovation and are always looking for ways to improve our solutions and better serve our clients.",
+        "text2": "We believe that ethics is fundamental to building long-term relationships with our clients and partners, and that social responsibility is an essential aspect of our role as a leading company in the technology market."
+      }
+    },
+    "services": {
+      "title": "OUR SERVICES",
+      "intro": "We offer a wide range of technological services to help clients achieve their goals and remain competitive in the market.",
+      "list": {
+        "mobile": { "title": "Mobile App Development", "desc": "Our app development team creates mobile solutions that help our clients connect with their customers and manage their businesses efficiently, both for Android and iOS." },
+        "web": { "title": "Web Development", "desc": "We use the latest and most performant technology to create your website as quickly as possible." },
+        "cloud": { "title": "Cloud Computing Services", "desc": "We offer Cloud Computing solutions to help our clients manage their data and processes securely and efficiently, as well as allowing them to work remotely." },
+        "automation": { "title": "Automation", "desc": "Business process automation services to help increase the efficiency and productivity of your operations." },
+        "security": { "title": "Information Security", "desc": "Robust security solutions to protect your data and systems against external threats and vulnerabilities." },
+        "analytics": { "title": "Data Analytics", "desc": "Analysis services to gain valuable insights into your business and make more strategic and informed decisions." },
+        "microsoft": { "title": "Microsoft Solutions", "desc": "Simplified and powerful solutions using Power BI, Excel, Power Apps, and the entire Microsoft ecosystem." },
+        "consulting": { "title": "IT Consulting", "desc": "Specialized consulting to help maximize the potential of your systems, reduce costs, and improve efficiency." }
+      }
+    },
+    "suppliers": {
+      "title": "OUR PARTNERS"
+    },
+    "quote": {
+      "title": "REQUEST A QUOTE",
+      "form": {
+        "name": "Full Name",
+        "email": "Professional E-mail",
+        "phone": "Phone / WhatsApp",
+        "message": "How can we help?",
+        "submit": "Send Request",
+        "success": "Thank you for your request! We will contact you soon."
+      }
+    },
+    "footer": {
+      "slogan": "Advancing the world through code.",
+      "contact": "Contact",
+      "follow": "Follow Us",
+      "rights": "Lusystech Solutions. All rights reserved.",
+      "privacy": {
+        "title": "Lusystech Privacy Policy:",
+        "text": "Lusystech is committed to protecting the privacy of its users... This Privacy Policy describes how we collect, use, share, and protect the information we collect from our users. By using our services, you agree to this Privacy Policy. Information Collection: Lusystech collects personal information you provide, such as name, email address, phone, address, and payment information, when you register for our services or perform a transaction with us. We may also collect information about how you use our services, including your IP address, browser type, pages accessed, and duration of usage. Use of Information: Lusystech uses the collected information to provide our services, process transactions, send communications about our services, and respond to support requests. We may also use this information to improve our services and personalize your experience based on your preferences. Information Sharing: Lusystech does not sell or rent your personal information to third parties. We may share information with third parties, such as service providers, to provide our services, process transactions, or provide customer support. We may also share information to comply with legal requirements, protect our rights or the rights of our users, or to investigate frauds. Information Protection: Lusystech adopts reasonable security measures to protect collected information against loss, misuse, unauthorized access, disclosure, alteration, or destruction. However, no security measure is completely infallible, and we cannot guarantee absolute security of collected information. Changes to this Privacy Policy: Lusystech reserves the right to update or change this Privacy Policy at any time without prior notice. Changes will take effect as soon as they are published on this page. Contact: If you have questions or concerns about this Privacy Policy or how Lusystech uses your information, please contact us via email: lusystech@hotmail.com"
+      }
+    }
+  }
+}
