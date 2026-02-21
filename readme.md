@@ -13,8 +13,6 @@ Aqui você pode ver o visual da nossa landing page:
 ![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205016.png) | ![Mobile Preview](./src/img/mobile4.png) |
 ![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205036.png) | ![Mobile Preview](./src/img/mobile5.png) |
 
-> [!TIP]
-> **Substitua as imagens acima** colocando seus próprios prints na pasta `public/screenshots/` e atualizando os links no README.
 
 ## �🛠️ Tecnologias Utilizadas
 
