@@ -9,9 +9,9 @@ Aqui você pode ver o visual da nossa landing page:
 |                                      Desktop                                       |                                      Mobile                                      |
 | :--------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: |
 | ![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20204949.png) | ![Mobile Preview](./src/img/mobile.png) |
-![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205002.png) | ![Mobile Preview](./src/img/mobil2.png) |
-![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205016.png) | ![Mobile Preview](./src/img/mobil3.png) |
-![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205036.png) | ![Mobile Preview](./src/img/mobil4.png) |
+![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205002.png) | ![Mobile Preview](./src/img/mobile2.png) |
+![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205016.png) | ![Mobile Preview](./src/img/mobile3.png) |
+![Desktop Preview](./src/img/Captura%20de%20tela%202026-02-18%20205036.png) | ![Mobile Preview](./src/img/mobile4.png) |
 
 > [!TIP]
 > **Substitua as imagens acima** colocando seus próprios prints na pasta `public/screenshots/` e atualizando os links no README.
