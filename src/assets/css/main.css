@@ -268,8 +268,11 @@
 .hero-cta .btn-glow {
   background: var(--color-accent-blue);
   box-shadow: 0 10px 20px -10px rgba(0, 112, 243, 0.5);
-  border-radius: 8px; /* More techy, less pill */
+  border-radius: 8px;
   padding: 1rem 2.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 .hero-cta .btn-glow:hover {
   transform: translateY(-2px);
@@ -349,6 +352,9 @@
   }
   .btn-glow {
     font-weight: 400;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
   }
 }
 
