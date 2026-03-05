@@ -351,7 +351,7 @@
     font-size: clamp(2.8rem, 6vw, 5rem);
   }
   .btn-glow {
-    font-weight: 400;
+    font-weight: 700;
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
