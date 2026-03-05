@@ -343,6 +343,15 @@
   }
 }
 
+@media (max-width: 436px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+  }
+  .btn-glow {
+    font-weight: 500;
+  }
+}
+
 /* Company.css extracted from Company.jsx */
 .company-section {
   background-color: var(--color-bg-primary);
