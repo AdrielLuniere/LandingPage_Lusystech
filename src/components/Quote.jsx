@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
 const Quote = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,11 +18,38 @@ const Quote = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(t('quote.form.success'));
-    // Here you would typically send the data to a backend
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setLoading(true);
+    setSuccess(false);
+
+    const formspreeEndpoint = 'https://formspree.io/f/maqpwyob';
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        // Reset success message after 5 seconds
+        setTimeout(() => setSuccess(false), 5000);
+      } else {
+        const data = await response.json();
+        throw new Error(data.error || 'Erro ao enviar o formulário.');
+      }
+    } catch (error) {
+      console.error('Formspree Error:', error);
+      alert('Houve um erro ao enviar. Tente novamente mais tarde.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -76,7 +104,13 @@ const Quote = () => {
                         className="modern-input"
                     ></textarea>
                 </div>
-                <button type="submit" className="btn-glow submit-btn">{t('quote.form.submit')}</button>
+                <button 
+                  type="submit" 
+                  className={`btn-glow submit-btn ${success ? 'success' : ''}`} 
+                  disabled={loading || success}
+                >
+                  {loading ? 'Enviando...' : success ? 'Enviado com sucesso!' : t('quote.form.submit')}
+                </button>
             </form>
         </div>
       </div>
@@ -133,9 +167,10 @@ const Quote = () => {
             font-size: 0.9rem;
         }
 
-        .submit-btn {
-            width: 100%;
-            margin-top: 1rem;
+        .submit-btn.success {
+            background: #2ecc71;
+            border-color: #27ae60;
+            cursor: default;
         }
         
         @media (max-width: 768px) {
